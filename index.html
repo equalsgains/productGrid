@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Product grid
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+ <main>
+     <div id="overlay">
+    <div class="container" id="submitForm">
+                <form class="center" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label class="form-label">Title*</label><label id="titleValidationError">This field is required.</label>
+                        <input type="text" name="title" id="title" class="form-control">
+                    </div>
+                    <div>
+                        <label class="form-label">Description</label>
+                        <input type="text" name="description" id="description" class="form-control">
+                    </div>
+                    <div>
+                        <label class="form-label">Price</label>
+                        <input type="text" name="price" id="price" class="form-control">
+                    </div>
+                    <div>
+                        <label class="form-label">Quantity</label>
+                        <input type="text" name="quantity" id="quantity" class="form-control">
+                    </div>
+                    <div>
+                        <label class="form-label">Image</label>
+                        <input type="text" name="image" id="image" class="form-control">
+                    </div>
+                    <div  class="formActionButtons">
+                        <input type="submit" value="Submit" class="btn btn-primary" onclick="off();">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+               <div class="container">
+    <table class="list table js-sort-table" id="itemsList">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Image</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>PS5</td>
+            <td>Sony Gaming Console</td>
+            <td>$499</td>
+            <td>3</td>
+            <td>image url</td>
+            <td>
+                <a class="btn btn-primary" onclick="onEdit(this), on();">Edit</a>
+                <a class="btn btn-danger" onclick="onDelete(this)">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Xbox Series X</td>
+            <td>Microsoft Gaming Console</td>
+            <td>$499</td>
+            <td>5,355</td>
+            <td>image url</td>
+            <td>
+                <a class="btn btn-primary" onclick="onEdit(this), on();">Edit</a>
+                <a class="btn btn-danger" onclick="onDelete(this)">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Switch</td>
+            <td>Nintendo Console</td>
+            <td>$199</td>
+            <td>535,355</td>
+            <td>image url</td>
+            <td>
+                <a class="btn btn-primary" onclick="onEdit(this), on();">Edit</a>
+                <a class="btn btn-danger" onclick="onDelete(this)">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>MacBook Pro M1</td>
+            <td>Apple's latest flagship</td>
+            <td>$1,199</td>
+            <td>12,355</td>
+            <td>image url</td>
+            <td>
+                <a class="btn btn-primary" onclick="onEdit(this), on();">Edit</a>
+                <a class="btn btn-danger" onclick="onDelete(this), on();">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Switch</td>
+            <td>Nintendo Console</td>
+            <td>$199</td>
+            <td>535,355</td>
+            <td>image url</td>
+            <td>
+                <a class="btn btn-primary" onclick="onEdit(this), on();">Edit</a>
+                <a class="btn btn-danger" onclick="onDelete(this)">Delete</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Samsung S21</td>
+            <td>Samsung Best Camera on a Smartphone yet</td>
+            <td>$999</td>
+            <td>535,355</td>
+            <td>image url</td>
+            <td>
+                <a class="btn btn-primary" onclick="onEdit(this), on();">Edit</a>
+                <a class="btn btn-danger" onclick="onDelete(this)">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" onclick="on();">Add New Item</button>
+</div>
+</main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script src="sort-table.min.js"></script>
+</body>
+
+</html>
